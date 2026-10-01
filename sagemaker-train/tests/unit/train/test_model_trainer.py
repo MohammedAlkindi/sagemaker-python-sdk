@@ -2231,6 +2231,8 @@ def test_prepare_train_script_writes_lf_line_endings(model_trainer):
 
         assert b"\r\n" not in raw
         assert raw.startswith(b"\n#!/bin/bash\n") or raw.startswith(b"#!/bin/bash\n")
+
+
 # Actionable error guidance in train(). The original exception must always propagate
 # unchanged; the SDK only adds remediation logging for common terminal failures
 # (quota exhaustion, missing region/credentials) so users and automation stop
